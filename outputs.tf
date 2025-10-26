@@ -15,7 +15,6 @@ output "vpn_attachment_details" {
       status                = attachment.status
       transit_router_id     = attachment.transit_router_id
       vpn_id                = attachment.vpn_id
-      resource_type         = attachment.resource_type
     }
   }
 }
