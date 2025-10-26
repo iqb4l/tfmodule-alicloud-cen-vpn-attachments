@@ -4,8 +4,8 @@ resource "alicloud_cen_transit_router_vpn_attachment" "this" {
   
   cen_id                                = var.cen_id
   transit_router_id                     = var.transit_router_id
-  vpn_id                                = each.value.vpn_gateway_id
-  vpn_owner_id                          = each.value.vpn_owner_id
+  vpn_id                                = var.vpn_gateway_id
+  vpn_owner_id                          = var.vpn_owner_id
   auto_publish_route_enabled            = each.value.auto_publish_route_enabled
   charge_type                           = each.value.charge_type
   transit_router_attachment_name        = each.value.attachment_name

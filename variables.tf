@@ -16,8 +16,6 @@ variable "route_table_id" {
 variable "vpn_attachments" {
   description = "Map of VPN Gateway attachments to connect to CEN Transit Router"
   type = map(object({
-    vpn_gateway_id             = string
-    vpn_owner_id               = string
     attachment_name            = string
     description                = optional(string)
     auto_publish_route_enabled = optional(bool)
@@ -26,6 +24,15 @@ variable "vpn_attachments" {
   default = {}
 }
 
+variable "vpn_gateway_id" {
+  type        = string
+  description = "ID of the VPN Gateway"
+}
+
+variable "vpn_owner_id" {
+  type        = string
+  description = "Owner ID of the VPN Gateway"
+}
 variable "enable_route_table_association" {
   description = "Enable route table association for VPN attachments"
   type        = bool
