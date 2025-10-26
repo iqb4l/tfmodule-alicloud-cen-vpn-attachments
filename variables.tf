@@ -25,7 +25,7 @@ variable "vpn_attachments" {
 }
 
 variable "vpn_gateway_id" {
-  type        = list(string)
+  type        = string
   description = "ID of the VPN Gateway"
 }
 
